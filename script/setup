@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# script: setup
+# description: set up application for the first time after cloning.
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+echo "==> App is ready!"

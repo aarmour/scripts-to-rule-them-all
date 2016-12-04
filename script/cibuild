@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# script: cibuild
+# description: Setup environment for CI to run tests. This is intended to be run
+# on the continuous integration server.
+
+set -e
+
+cd "$(dirname "$0")/.."
+

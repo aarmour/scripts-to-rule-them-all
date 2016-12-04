@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# script: bootstrap
+# description: resolve all dependencies required for the app to run.
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+if [ -f ".node-version" ] && [ -f "$HOME/.nvm/nvm.sh" ]; then
+  echo "==> Installing Node.js…"
+  . "$HOME/.nvm/nvm.sh"
+  nvm install "$(< .node-version)"
+fi
+
+echo "==> Installing Node.js dependencies…"
+npm install
+

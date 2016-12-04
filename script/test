@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# script: test
+# description: Run the test suite. For Node.js projects, this simply delegates
+# to the "test" script in package.json
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+echo "==> Running tests…"
+npm test
+
